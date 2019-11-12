@@ -28,44 +28,28 @@ Para isso, necessitamos de duas telas:
 - 1 - Listagem de produtos
 - 2 - carrinho de compra
 
-### Telas
+### Requisitos funcionais
 
-Essas telas precisam seguir alguns pré requisitos, sendo o primeiro o seguinte layout para elas:
+- **Listagem de produtos**: O usuário necessita ver uma listagem de produtos para poder adicioná-los ao carrinho, pode ser feita por listagem (exemplo tabela ou grilla). Cada item da listagem de produtos deve exibir obrigatoriamente: imagem do produto, nome e preço do produto, além de um botão para adicionar itens ao carrinho. O desenvolvedor pode desenvolver filtros para facilitar o acesso aos itens, não sendo obrigatório mas desejável. Sugestão de mockup segue abaixo;
 
-- **Listagem de produtos**: O usuário necessita ver uma listagem de produtos para poder adicioná-los ao carrinho, pode ser feita por listagem (exemplo tabela ou grilla). Cada item da listagem de produtos deve exibir obrigatoriamente: imagem do produto, nome e preço do produto, além de um botão para adicionar itens ao carrinho. O desenvolvedor pode desenvolver filtros para facilitar o acesso aos itens, não sendo obrigatório mas desejável. Este filtro deve conter ser por nome, tipo e valor.
+![listagem](layout/listagem.png)
 
-- O carrinho de compras exibirá dois componentes principais para o usuário visualizar e finalizar a compra:
+- **Carrinho** O carrinho de compras exibirá dois componentes principais para o usuário visualizar e finalizar a compra, sugestão de mockup segue abaixo:
 
-  - **Lista de itens adicionados ao carrinho**, cada item com sua quantidade, está podendo ser aumentada ou diminuída diretamente no input, botões de seleção em cada item, sendo possível remover os produtos selecionados e também limpar todos os itens do carrinho, além de um botão de finalizar compra que irá exibir um alerta na tela com o valor final.
+  - **Lista de itens adicionados ao carrinho**, cada item com sua quantidade, esta podendo ser aumentada ou diminuída diretamente no input, botões de seleção em cada item, sendo possível remover os produtos selecionados e também limpar todos os itens do carrinho, além de um botão de finalizar compra que irá exibir um alerta na tela com o valor final.
   - **Resumo da Compra**, será exibido um resumo da compra com:
     - Listagem de produtos com nome, valor, quantidade e valor total de cada produto;
     - Seleção de forma de pagamento (Boleto ou cartão), no caso cartão de crédito o sistema deve exibir um input de quantidade de parcelas.
     - Valor total da compra com descontos calculados.
-
-- Detalhes de Layout
-
-O desenvolvedor deverá criar uma barra superior contendo o acesso a cada tela e um campo em formato de emblema ou divisa com a quantidade total de itens no carrinho, toda e qualquer alteração na quantidade de itens no carrinho deverá ser refletida em tempo real na barra superior.
-
-O desenvolvedor deverá criar o layout para as telas, sugerimos os mockups abaixo:
-
-      - Listagem
-
-![listagem](layout/listagem.png)
-
-      - Item
+    - O sistema deve calcular valor final dos produtos com descontos dependendo do modo de pagamento:
+      - Opções de pagamento "boleto" tem 12% de desconto no total do carrinho.
+      - Opções de pagamento "cartão de crédito" tem 5% de desconto, em até três vezes, no total do carrinho.
 
 ![Grilla](layout/item.png)
 
-      - Carrinho
-
 ![Carrinho](layout/carrinho.png)
 
-### Requisitos funcionais
-
-O sistema deve calcular valor final dos produtos com descontos dependendo do modo de pagamento:
-
-- Opções de pagamento "boleto" tem 12% de desconto no total do carrinho.
-- Opções de pagamento "cartão de crédito" tem 5% de desconto, em até três vezes, no total do carrinho.
+ - **Menu** O usuário necessita de uma barra superior contendo o acesso a cada tela e um campo em formato de emblema ou divisa com a quantidade total de itens no carrinho, toda e qualquer alteração na quantidade de itens no carrinho deverá ser refletida em tempo real na barra superior.
 
 ### Requisitos não funcionais
 
@@ -84,11 +68,9 @@ O sistema deve calcular valor final dos produtos com descontos dependendo do mod
 
 ## Get Started
 
-Você deverá criar o projeto React do zero, pode utilizar uma ferramenta como [Create-React-App](https://create-react-app.dev/)
+Você deverá criar o projeto React do zero, o desenvolvedor pode utilizar uma ferramenta como [Create-React-App](https://create-react-app.dev/) e etc.
 
-A listagem de produtos será disponibilizada em um servidor Graphql na porta 4000, para utiliza-lo
-
-Instalar e Rodar entre na pasta server e execute `yarn start && yarn start`
+A listagem de produtos será disponibilizada em um servidor Graphql na porta 4000, para utiliza-lo basta instalar e rodar, entre na pasta `server` e execute `yarn install && yarn start`.
 
 Você deve recuperar esses dados, eles estão no seguinte formato:
 
@@ -109,7 +91,7 @@ query produtos {
 }
 ```
 
-Você deve enviar os itens selecionados para enviar ao servidor ao finalizar a compra, você irá utilizar a mutation:
+Ao finalizar o carinho, você chamar a seguinte mutation.
 
 ```
 mutation finalizar {
@@ -174,7 +156,7 @@ enum ProductType {
 
 Gostou do desafio? Se prepare e comece fazendo um Fork do projeto no github, você terá dois dias para concluir após o fork!
 
-Crie uma branch, e após concluir faça um pull request para a branch `candidatos-desafio` com seu nome e sobrenome como título.
+Crie uma branch, e após concluir faça um pull request com seu nome e sobrenome como título.
 
 Garanta que seu projeto final estará com build em `/build`, realizando a mutation e rodando bonitinho.
 

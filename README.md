@@ -19,8 +19,6 @@ A avaliação desafio consiste em quatro pontos de
 - 3 - Design, interação e criatividade na criação de telas do sistema
 - 4 - Coerência: Avalia se os requisitos foram atendidos
 
-## Desafio por si só
-
 A Tecsinapse quer criar uma loja online para seus sistemas, e para isso precisamos que você crie uma loja em React, capaz de listar itens oriundos de um servidor Graphql e realizar sua compra.
 
 Para isso, necessitamos de duas telas:
@@ -66,13 +64,13 @@ Para isso, necessitamos de duas telas:
 - Testes
 - Lints
 
-## Get Started
+## Criando e submentendo sua solução 
 
-Você deverá criar o projeto React do zero, o desenvolvedor pode utilizar uma ferramenta como [Create-React-App](https://create-react-app.dev/) e etc.
+Você deverá criar o projeto React do zero, o desenvolvedor pode utilizar uma ferramenta como [Create-React-App](https://create-react-app.dev/) e etc. Este projeto se comunicará com um servidor Graphql, este disponibiliza a listagem de produtos e operação de finalização, este está na pasta `server`.
 
-A listagem de produtos será disponibilizada em um servidor Graphql na porta 4000, para utiliza-lo basta instalar e rodar, entre na pasta `server` e execute `yarn install && yarn start`.
+O servidor Graphql roda na porta 4000, para utiliza-lo entre na pasta `server` e execute `yarn install && yarn start`.
 
-Você deve recuperar esses dados, eles estão no seguinte formato:
+Você deve recuperar a listagem produtos, esta está no seguinte formato:
 
 ```
 query produtos {
@@ -91,7 +89,8 @@ query produtos {
 }
 ```
 
-Ao finalizar o carinho, você chamar a seguinte mutation.
+Ao finalizar o carinho, você realizar uma chamada de finalização no servidor, para isso foi disponibilizada a mutation `finalizar`.
+
 
 ```
 mutation finalizar {

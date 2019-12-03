@@ -158,7 +158,7 @@ Gostou do desafio? Se prepare e comece fazendo um Fork do projeto no github, voc
 
 Crie uma branch, e após concluir faça um pull request com seu nome e sobrenome como título.
 
-Garanta que seu projeto final estará com build em `/build`, realizando a mutation e rodando bonitinho.
+Garanta que seu projeto final estará com build (`yarn build`) em `/build` rodando bonitinho.
 
 Qualquer dúvida em relação ao desafio, crie uma issue em nosso github.
 

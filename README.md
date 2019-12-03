@@ -55,7 +55,8 @@ Para isso, necessitamos de duas telas:
 - Redux, Context API ou MobX para manipulação de estados
 - Cliente Grapqhl, pode ser Apollo, Relay ou etc;
 - Design Responsivo
-- [Material-UI](https://github.com/mui-org/material-ui) e nossa biblioteca de Componentes da Tecsinapse [@tecsinapse/ui-kit](https://tecsinapse.github.io/ui-kit/)
+- É obrigatório o uso de componentes do [Material-UI](https://github.com/mui-org/material-ui)
+- É obrigatório o uso da biblioteca de Componentes da Tecsinapse [@tecsinapse/ui-kit](https://tecsinapse.github.io/ui-kit/) utilizando pelo menos algum componente.
 
 ### Diferenciais
 

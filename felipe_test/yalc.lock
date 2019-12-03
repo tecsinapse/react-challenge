@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@tecsinapse/ui-kit": {
+      "signature": "ed21e89b2ad8b0997f5d3a457f6e3b91",
+      "file": true,
+      "replaced": "^2.1.2"
+    }
+  }
+}
